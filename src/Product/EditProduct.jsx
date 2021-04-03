@@ -12,7 +12,7 @@ export default function EditProduct(props) {
 
     const [singleProduct, setSingleProduct] = React.useState(null)
              axios
-            .get('http://localhost:4000/product/' + props.match.params.id)
+             .get('http://localhost:4000/product/' + props.request.params.id)
             .then(response => singleProduct(response.data))
 
         const updateData = (event) => {
@@ -21,10 +21,7 @@ export default function EditProduct(props) {
             const getAllUpdateProductValues = {
                 name:singleProduct.name,
                 category:singleProduct.category,
-                description:singleProduct.description,
                 price:singleProduct.price,
-                rating:singleProduct.rating,
-                likeCount:singleProduct.likeCount,
                 image:singleProduct.image
             }
             // console.log(getAllProductValues)
@@ -34,10 +31,7 @@ export default function EditProduct(props) {
             setSingleProduct({
                 name:'',
                 category:'',
-                description:'',
                 price:0,
-                rating:0,
-                likeCount:0,
                 image:''
         })
     }
@@ -72,15 +66,6 @@ export default function EditProduct(props) {
                         className={"mb-3"}
                     />
                     <TextField
-                        label={"Description"}
-                        fullWidth
-                        value={singleProduct.description}
-                        onChange={(e) => setSingleProduct({...singleProduct, description: e.target.value})}
-
-                        multiline
-                        className={"mb-3"}
-                    />
-                    <TextField
                         label={"Price"}
                         fullWidth
                         value={singleProduct.price}
@@ -88,27 +73,11 @@ export default function EditProduct(props) {
 
                         className={"mb-3"}
                     />
-                    <TextField
-                        label={"Rating"}
-                        onChange={(e) => setSingleProduct({...singleProduct, rating: e.target.value})}
-
-                        value={singleProduct.rating}
-                        fullWidth
-                        className={"mb-3"}
-                    />
                     <PickImage
                         type={"file"}
                         onDone={({base64}) => setSingleProduct({...singleProduct, image: base64})}
                         mutiple={false}
                         className={"mb-5"}
-                    />
-                    <TextField
-                        label={"Like Count"}
-                        onChange={(e) => setSingleProduct({...singleProduct, likeCount: e.target.value})}
-
-                        value={singleProduct.likeCount}
-                        fullWidth
-                        className={"mb-3 mt-4"}
                     />
                     <Button
                         type={"submit"}
@@ -123,10 +92,7 @@ export default function EditProduct(props) {
 
             <we use this when we want to show all values below the screen />
             <h1>{singleProduct.name}</h1>
-            <h1>{singleProduct.description}</h1>
-            <h1>{singleProduct.rating}</h1>
             <h1>{singleProduct.price}</h1>
-            <h1>{singleProduct.likeCount}</h1>
             <h1>{singleProduct.category}</h1>
         </Container>
     }

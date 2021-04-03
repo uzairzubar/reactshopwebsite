@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Alerat() {
+export default function Alerat1() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
 
@@ -36,7 +36,8 @@ export default function Alerat() {
                         </IconButton>
                     }
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque aut, cumque, dolorem doloremque ea est explicabo facere magni molestiae nulla pariatur quam reiciendis rem saepe sunt veritatis vero, voluptate?
+                <h2>THIS SERVICE ONLY FOR REGISTER COUSTEMAR</h2>
+                    <Button className={"text-danger"} onClick={()=>window.location='/Register'}>Register</Button>
                 </Alert>
             </Collapse>
             <Button
@@ -48,6 +49,7 @@ export default function Alerat() {
             >
                 Re-open
             </Button>
+
         </div>
     );
 }

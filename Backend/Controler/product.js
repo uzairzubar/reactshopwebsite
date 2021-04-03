@@ -1,5 +1,5 @@
 const objectID = require('mongoose').Types.ObjectId
-const addNewProduct = require('../modles/product')
+const addNewProduct = require('../Models/Product')
 
 
 const getProducts = (request,response) => {
@@ -29,10 +29,7 @@ const SaveProducts =(request,response) => {
         name: request.body.name,
         price: request.body.price,
         category: request.body.category,
-        description: request.body.description,
-        rating: request.body.rating,
         image: request.body.image,
-        likeCount: request.body.likeCount,
     })
     insertData.save((error,document) =>{
         if(!error){
@@ -55,10 +52,7 @@ const editProducts = (request,response) => {
         name: request.body.name,
         price: request.body.price,
         category: request.body.category,
-        description: request.body.description,
-        rating: request.body.rating,
         image: request.body.image,
-        likeCount: request.body.likeCount,
     }
     addNewProduct.findByIdAndUpdate(request.params.id,
         {$set:updateData},

@@ -1,39 +1,45 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from "react-responsive-carousel";
-import image1 from './Images/school.jpg'
-import image2 from './Images/teacher1.jpg'
-import image3 from './Images/jeffrey-f-lin-nEVpAGpTKnI-unsplash.jpg'
-import image4 from './Images/annie-spratt-OIuCXxx08yg-unsplash.jpg'
-import image5 from './Images/schoolbus.jpg'
+import image1 from './Images/ali-inay-0h9LsnY13Hs-unsplash.jpg'
+import image2 from './Images/delevery.jpg'
+import image3 from './Images/ioi.jpg'
+import image4 from './Images/freedelevery.jpg'
+import image5 from './Images/sven-mieke-7NTc2bMDHHg-unsplash.jpg'
+import image6 from './Images/phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg'
 import {Link} from "react-router-dom";
 
 export default function CarouselSlider() {
     const slideData = [
         {
             url:image1,
-            name:"STUDY",
-            web:'/study'
+            name:"OUR-PRODUCTS",
+            web:'/shoop'
         },
         {
             url:image3,
-            name:"SPORTS",
-            web:'/sport'
+            name:"CubeSidePickUp",
+            web:'/cube'
         },
         {
             url:image4,
-            name:"OUR-AIM",
-            web: '/ouraim'
+            name:"Free-Shipping",
+            web: '/shiping'
         },
         {
             url:image2,
-            name:"TEACHER",
-            web: '/teacher'
+            name:"Delivery",
+            web: '/delevery'
         },
         {
             url:image5,
-            name:"TRANSPORT",
-            web: '/transport'
+            name:"Save-Covid(19)",
+            web: '/save'
+        },
+        {
+            url:image6,
+            name:"FURNITURE MANUFACTURING",
+            web: '/manu'
         }
     ]
     return(
@@ -48,7 +54,7 @@ export default function CarouselSlider() {
                 slideData.map((data) =>
 
                     <div>
-                        <img src={data.url} />
+                        <image src={data.url} alt={"image"} />
                         <Link to={data.web}>
                             <p className="legend">
                                 {data.name}

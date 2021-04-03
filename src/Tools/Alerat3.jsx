@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Alerat1() {
+export default function Alerat3() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
 
@@ -36,8 +36,7 @@ export default function Alerat1() {
                         </IconButton>
                     }
                 >
-                <h2>THIS SERVICE ONLY FOR REGISTER COUSTEMAR</h2>
-                    <Button className={"text-danger"}>Register</Button>
+                <h2>WE Follow ALL These Steps</h2>
                 </Alert>
             </Collapse>
             <Button

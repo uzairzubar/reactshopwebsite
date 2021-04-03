@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Alerat1() {
+export default function Alerat4() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
 
@@ -36,7 +36,7 @@ export default function Alerat1() {
                         </IconButton>
                     }
                 >
-                <h2>WE Follow ALL These Steps</h2>
+                <h2>FURNITURE MANUFACTURING PROCESS</h2>
                 </Alert>
             </Collapse>
             <Button

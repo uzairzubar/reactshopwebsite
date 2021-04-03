@@ -4,7 +4,7 @@ import {Box} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Grid from "@material-ui/core/Grid";
-import img1 from '../images/IMG-20201012-WA0016.jpg'
+import img1 from '../Images/george-desipris-WpLm6hix8i8-unsplash.jpg'
 
 export default function welCome() {
     return(
@@ -12,11 +12,6 @@ export default function welCome() {
             <Box my={5}>
                 <Typography variant={"h4"} className={"text-center text-danger text-uppercase"}>
                     WelCome User---{localStorage.getItem('loginName')}
-                    {/*localstorage.setitem(key,value)*/}
-                    {/*localstorage.getitem(key)*/}
-                    {/*localstorage.removeitem(key)*/}
-                    {/*localstorage.clear()*/}
-                    {/*localstorage.length()*/}
                 </Typography>
                 <hr className={"bg-danger"} width={"12%"} style={{height:"5px"}}/>
                 <Grid container>
@@ -67,7 +62,7 @@ export default function welCome() {
                     </Grid>
                     <Grid item md={2}>
                         {/*<img src={img1} alt={"photo"} width={"100%"} className={"img-thumb"}/>*/}
-                        <img src={localStorage.getItem('loginProfile') ?? img1} alt={"photo"} width={"100%"} className={"img-thumb"}/>
+                        <img src={localStorage.getItem('loginProfile') ?? img1} alt={"img"} width={"100%"} className={"img-thumb"}/>
                     </Grid>
                 </Grid>
             </Box>

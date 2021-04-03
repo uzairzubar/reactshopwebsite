@@ -2,22 +2,22 @@
     position: relative;
     overflow: hidden;
 }
-.productAddToCartFunction{
+.productAddToCart{
     color: white;
-    /*width: 87%;*/
+    width: 85%;
     padding: 10px;
-    /*display: none;*/
-    /*opacity: 0 it means display none;*/
+    opacity: 0;
+    background-color: green;
     position: absolute;
 }
-.productHeader:hover .productAddToCartFunction{
-    background-color: black;
-    /*bottom: 94px;*/
+.productHeader:hover .productAddToCart{
+    /*background-color: black;*/
+    bottom: 24px;
     /*display: block;*/
-    transform: translate(80px, -190px);
-    transition: .5s ease;
-    color: white;
-    /*text-align: center;*/
+    transform: translate(10px, -60px);
+    transition: .3s ease;
+    color:beige;
+    text-align: center;
     /*font-size: 20px;*/
-    /*opacity: 1 it maens dislay block;*/
+    opacity: 1 ;
 }

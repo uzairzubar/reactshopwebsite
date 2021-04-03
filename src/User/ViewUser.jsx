@@ -38,6 +38,7 @@ export default function ViewUser() {
                             <Typography>{data._id}</Typography>
                             <Typography>{data.name}</Typography>
                             <Typography>{data.email}</Typography>
+                            <Typography>{data.phone}</Typography>
                             <Typography>{data.date}</Typography>
                         </CardContent>
                         <CardActions disableSpacing>

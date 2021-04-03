@@ -52,6 +52,7 @@ export default function LogIn() {
         const userLoggedValues = {
             name: user.name,
             email: user.email,
+            phone: user.phone,
             password: user.password
         }
         axios.post('http://localhost:4000/user/login',userLoggedValues)
@@ -64,6 +65,7 @@ export default function LogIn() {
                     // alert("logIn Successfully")
 
                     localStorage.setItem("loginEmail",response.data.email)
+                    localStorage.setItem("loginNumber",response.data.phone)
                     localStorage.setItem("loginPassword",response.data.password)
                     localStorage.setItem("loginName",response.data.name)
                     localStorage.setItem("loginDate",response.data.date)
@@ -92,6 +94,11 @@ export default function LogIn() {
                             <TextField type={"email"} label={"EmailAdress"}
                                        value={user.email}
                                        onChange={(event) => {setUser({...user,email: event.target.value})}}
+
+                                       fullWidth className={"mb-3"}/>
+                                       <TextField type={"number"} label={"PhoneNumber"}
+                                       value={user.phone}
+                                       onChange={(event) => {setUser({...user,phone: event.target.value})}}
 
                                        fullWidth className={"mb-3"}/>
                             <TextField type={"password"}

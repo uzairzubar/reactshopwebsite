@@ -12,6 +12,7 @@ export default function Register() {
     const [user,setUser] = React.useState({
         name:'',
         email:'',
+        phone:'',
         password:''
     })
 
@@ -20,6 +21,7 @@ export default function Register() {
         const userSavedValues = {
            name: user.name,
             email: user.email,
+            phone: user.phone,
             password: user.password
         }
         axios.post('http://localhost:4000/user/saveUser',userSavedValues)
@@ -50,6 +52,14 @@ export default function Register() {
                                onChange={(event) => {setUser({...user,email: event.target.value})}}
 
                     />
+                    <TextField type={"number"}
+                               label={"phoneNumber"}
+                               fullWidth
+                               className={"mb-3"}
+                                value={user.phone}
+                               onChange={(event) => {setUser({...user,phone: event.target.value})}}
+
+                    />
                     <TextField
                         value={user.password}
                         onChange={(event) => {setUser({...user,password: event.target.value})}}
@@ -62,6 +72,7 @@ export default function Register() {
             </Box>
             <h1>{user.name}</h1>
             <h1>{user.email}</h1>
+            <h1>{user.phone}</h1>
             <h1>{user.password}</h1>
         </Container>
     )

@@ -49,7 +49,7 @@ const DialogActions = withStyles((theme) => ({
     },
 }))(MuiDialogActions);
 
-export default function Dialogi() {
+export default function Dialogi2() {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -61,8 +61,8 @@ export default function Dialogi() {
 
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Open dialog
+            <Button variant="outlined" className={"text-white"} onClick={handleClickOpen}>
+                Detail
             </Button>
             <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                 <DialogTitle id="customized-dialog-title" onClose={handleClose}>
@@ -84,8 +84,8 @@ export default function Dialogi() {
                     </Typography>
                 </DialogContent>
                 <DialogActions>
-                    <Button autoFocus onClick={handleClose} color="primary">
-                        Save changes
+                    <Button autoFocus onClick={handleClose} className={"text-danger"}>
+                        Close
                     </Button>
                 </DialogActions>
             </Dialog>

@@ -1,0 +1,13 @@
+POST http://localhost:4000/product/addproduct
+Content-Type: application/json
+
+{
+  "ProductName":"ali",
+  "Price":"ali",
+  "likeCount":"u@u.u",
+  "Category":"ali",
+  "description":"ali",
+  "image":"ali"
+}
+
+###

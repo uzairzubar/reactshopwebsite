@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Alerat() {
+export default function Alerat2() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
 
@@ -36,7 +36,7 @@ export default function Alerat() {
                         </IconButton>
                     }
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque aut, cumque, dolorem doloremque ea est explicabo facere magni molestiae nulla pariatur quam reiciendis rem saepe sunt veritatis vero, voluptate?
+                    This SerVice Only Order USD.<h3>50$</h3>
                 </Alert>
             </Collapse>
             <Button
